@@ -20,9 +20,9 @@ app.use((req,res,next) =>{
 	next();
 });
 
-app.use((req,res,next) => {
-	res.render("maintenance");
-})
+// app.use((req,res,next) => {
+// 	res.render("maintenance");
+// })
 app.use(express.static(__dirname + "/public"));
 
 
@@ -55,6 +55,10 @@ app.get("/about", (req,res) => {
 		pageTitle: "About Page",
 	});
 })
+
+app.get("/gallery", (req,res) => {
+	res.render("gallery");
+});
 
 
 app.get("/bad", (req,res) => {
